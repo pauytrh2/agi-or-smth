@@ -2,7 +2,7 @@
 
 A successor to [jarvis](https://github.com/pauytrh2/jarvis)
 
-## tv
+## Installation
 
 ```bash
 git clone https://github.com/pauytrh2/agi-or-smth.git
