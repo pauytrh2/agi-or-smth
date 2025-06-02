@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/python
 from google import genai
 import threading
 from os import system as run_command
