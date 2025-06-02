@@ -1,5 +1,11 @@
 from gtts import gTTS
 from playsound import playsound
+from os import mkdir
+
+try:
+    mkdir("tmpaudio")
+except OSError: # dir already exists
+    pass
 
 def speak(text):
     print(f"Jarvis: {text}")
