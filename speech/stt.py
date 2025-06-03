@@ -16,5 +16,5 @@ def listen():
 
 if __name__ == "__main__":
     while True:
-        command = listen().lower()
+        command = listen()
         print("Recognized:", command)
