@@ -4,14 +4,17 @@ def listen():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
-        audio = recognizer.listen(source, timeout=5)
         try:
+            audio = recognizer.listen(source, timeout=5)
             return recognizer.recognize_google(audio)
-        except sr.UnknownValueError:
-            print("Sorry, I did not understand that.")
+        except sr.WaitTimeoutError:
+            print("No speech detected within timeout")
             return None
-        except sr.RequestError:
-            print("Sorry, there was an issue with the speech recognition service.")
+        except sr.UnknownValueError:
+            print("Could not understand audio")
+            return None
+        except sr.RequestError as e:
+            print(f"Could not request results; {e}")
             return None
 
 if __name__ == "__main__":
