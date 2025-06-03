@@ -1,10 +1,10 @@
 #!/usr/bin/python
 from google import genai
-import threading
+# import threading
 from os import system as run_command
 from imports.key import API_KEY
 from imports.prompt import prompt
-from imports.functions import write_file, open_url
+from imports.functions import open_url, write_file
 from imports.parser import parse
 from speech.stt import listen
 from speech.tts import speak
@@ -31,14 +31,16 @@ def run():
             print({human_text, action_code})
 
             if action_code != "0":
-                speak_thread = threading.Thread(target=speak, args=(human_text,))
-                eval_thread = threading.Thread(target=eval, args=(action_code,))
+                # speak_thread = threading.Thread(target=speak, args=(human_text,))
+                # eval_thread = threading.Thread(target=eval, args=(action_code,))
                 
-                speak_thread.start()
-                eval_thread.start()
+                # speak_thread.start()
+                # eval_thread.start()
 
-                speak_thread.join()
-                eval_thread.join()
+                # speak_thread.join()
+                # eval_thread.join()
+                speak(human_text)
+                eval(action_code)
             else:
                 speak(human_text)
 
