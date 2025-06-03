@@ -3,7 +3,7 @@ from playsound import playsound
 from os import mkdir
 
 try:
-    mkdir("tmpaudio")
+    mkdir("~/agi-or-smth/tmpaudio")
 except OSError: # dir already exists
     pass
 
