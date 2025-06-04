@@ -64,10 +64,10 @@ Removing hi.txt
 # Action:
 run_command("rm hi.txt")
 
-If no instructions are provided, anwser reuglarly:
+If no instructions are provided, ask for clerefication for example (mix it up a little bit, say it in your own words):
 
 # Human:
-Hello! what is on your mind today?
+Do you want me to search x on youtube or run it as a command or something else?
 
 # Action:
 0
